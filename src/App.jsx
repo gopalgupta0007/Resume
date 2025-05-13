@@ -289,6 +289,13 @@ const App = () => {
   const page1Ref = useRef(null);
   const page2Ref = useRef(null);
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = 'https://github.com/user-attachments/files/20189496/gopal.resume.1.pdf'; // Path relative to public folder
+    link.download = 'https://github.com/user-attachments/files/20189496/gopal.resume.1.pdf'; // This is the name that will be used to download
+    link.click();
+  };
+
   // Function to generate and download PDF with both pages
   const downloadPDF = async () => {
     if (!page1Ref.current || !page2Ref.current) return;
@@ -722,7 +729,8 @@ const App = () => {
       {/* Download Button */}
       <div className="max-w-4xl mx-auto mt-8 mb-16 flex justify-center">
         <button
-          onClick={downloadPDF}
+          // onClick={downloadPDF}
+          onClick={handleDownload}
           className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-md shadow-md transition-colors flex items-center"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
