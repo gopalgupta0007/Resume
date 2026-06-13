@@ -491,7 +491,7 @@ const grCSS = `
   }
 
   .gr-hd {
-    padding: 36px 48px 0;
+    padding: 20px 48px 0;
     border-bottom: 2.5px solid var(--rule);
     padding-bottom: 20px;
   }
@@ -531,11 +531,11 @@ const grCSS = `
 
   .gr-body { padding: 0 48px 36px; }
 
-  .gr-sec { padding-top: 22px; }
+  .gr-sec { padding-top: 5px; }
 
   .gr-sec-hd {
     display: flex; align-items: center; gap: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .gr-sec-title {
@@ -583,7 +583,7 @@ const grCSS = `
     padding: 2px 8px; margin-left: 8px;
   }
 
-  .gr-exp { margin-bottom: 18px; }
+  .gr-exp { margin-bottom: 5px; }
 
   .gr-exp-hd {
     display: flex; justify-content: space-between;
@@ -611,7 +611,7 @@ const grCSS = `
     background: linear-gradient(90deg,#fef4d8,#fffbf0);
     border: 1px solid #d9b54a; border-left: 3px solid var(--rule);
     color: #7a5400; font-size: 10px; font-weight: 600;
-    padding: 3px 10px; margin-bottom: 5px;
+    padding: 3px 5px; margin-bottom: 3px;
   }
 
   .gr-ul { list-style: none; margin-top: 4px; }
@@ -883,7 +883,7 @@ const Resume1 = () => {
                 PROFESSIONAL EXPERIENCE
               </h2>
               <div className="ml-2 pl-4 border-l-2 border-gray-200">
-                <div className="mb-4">
+                <div className="mb-2">
                   <div className="flex justify-between items-start">
                     <h3 className="text-base font-semibold text-blue-600">Software Developer | Carufus Technology</h3>
                     <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">May 2024 - Present</span>
@@ -901,7 +901,7 @@ const Resume1 = () => {
                   </ul>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-2">
                   <div className="flex justify-between items-start">
                     <h3 className="text-base font-semibold text-blue-600">MERN Stack Developer Intern | Digital Rhombus</h3>
                     <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Feb - Apr 2024</span>
@@ -914,7 +914,7 @@ const Resume1 = () => {
                   </ul>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-2">
                   <div className="flex justify-between items-start">
                     <h3 className="text-base font-semibold text-blue-600">Full Stack MERN Developer Intern | Tescom</h3>
                     <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Jul - Sep 2023</span>
@@ -1440,21 +1440,69 @@ const Resume3 = () => {
     }
   }, []);
 
+  // const downloadPDF = async () => {
+  //   if (!page1Ref.current || !page2Ref.current) return;
+  //   const pdf = new jsPDF('p', 'mm', 'a4');
+  //   const pw  = pdf.internal.pageSize.getWidth();
+  //   const ph  = pdf.internal.pageSize.getHeight();
+  //   const opt = el => ({ scale:3, useCORS:true, logging:false, letterRendering:true, allowTaint:false, backgroundColor:'#ffffff', windowWidth:el.scrollWidth, windowHeight:el.scrollHeight });
+  //   try {
+  //     const c1 = await html2canvas(page1Ref.current, opt(page1Ref.current));
+  //     pdf.addImage(c1.toDataURL('image/png',1),'PNG',0,0,pw,Math.min((c1.height*pw)/c1.width,ph));
+  //     pdf.addPage();
+  //     const c2 = await html2canvas(page2Ref.current, opt(page2Ref.current));
+  //     pdf.addImage(c2.toDataURL('image/png',1),'PNG',0,0,pw,Math.min((c2.height*pw)/c2.width,ph));
+  //     pdf.save('gopal_gupta_resume.pdf');
+  //   } catch(e) { console.error(e); alert('Error generating PDF. Please try again.'); }
+  // };
+
+
   const downloadPDF = async () => {
-    if (!page1Ref.current || !page2Ref.current) return;
-    const pdf = new jsPDF('p', 'mm', 'a4');
-    const pw  = pdf.internal.pageSize.getWidth();
-    const ph  = pdf.internal.pageSize.getHeight();
-    const opt = el => ({ scale:3, useCORS:true, logging:false, letterRendering:true, allowTaint:false, backgroundColor:'#ffffff', windowWidth:el.scrollWidth, windowHeight:el.scrollHeight });
-    try {
-      const c1 = await html2canvas(page1Ref.current, opt(page1Ref.current));
-      pdf.addImage(c1.toDataURL('image/png',1),'PNG',0,0,pw,Math.min((c1.height*pw)/c1.width,ph));
-      pdf.addPage();
-      const c2 = await html2canvas(page2Ref.current, opt(page2Ref.current));
-      pdf.addImage(c2.toDataURL('image/png',1),'PNG',0,0,pw,Math.min((c2.height*pw)/c2.width,ph));
-      pdf.save('gopal_gupta_resume.pdf');
-    } catch(e) { console.error(e); alert('Error generating PDF. Please try again.'); }
+  if (!page1Ref.current || !page2Ref.current) return;
+  const pdf = new jsPDF('p', 'mm', 'a4');
+  const pw = pdf.internal.pageSize.getWidth();   // 210mm
+  const ph = pdf.internal.pageSize.getHeight();  // 297mm
+
+  const captureEl = async (el) => {
+    // Temporarily pin width to A4 pixel width so html2canvas captures at full size
+    const prevWidth = el.style.width;
+    const prevMaxWidth = el.style.maxWidth;
+    el.style.width = '794px';
+    el.style.maxWidth = '794px';
+
+    const canvas = await html2canvas(el, {
+      scale: 3,
+      useCORS: true,
+      logging: false,
+      letterRendering: true,
+      allowTaint: false,
+      backgroundColor: '#ffffff',
+      windowWidth: 794,
+      windowHeight: el.scrollHeight,
+    });
+
+    el.style.width = prevWidth;
+    el.style.maxWidth = prevMaxWidth;
+    return canvas;
   };
+
+  try {
+    const c1 = await captureEl(page1Ref.current);
+    const h1 = (c1.height * pw) / c1.width;
+    pdf.addImage(c1.toDataURL('image/png', 1), 'PNG', 0, 0, pw, Math.min(h1, ph));
+
+    pdf.addPage();
+
+    const c2 = await captureEl(page2Ref.current);
+    const h2 = (c2.height * pw) / c2.width;
+    pdf.addImage(c2.toDataURL('image/png', 1), 'PNG', 0, 0, pw, Math.min(h2, ph));
+
+    pdf.save('gopal_gupta_resume.pdf');
+  } catch (e) {
+    console.error(e);
+    alert('Error generating PDF. Please try again.');
+  }
+};
 
   return (
     <div className="gr-outer">
@@ -1619,12 +1667,12 @@ const Resume3 = () => {
           </div>
 
           {/* STATS */}
-          <div className="gr-stats">
+          {/* <div className="gr-stats">
             <div className="gr-stat"><div className="sv">2<span>+</span></div><div className="sl">Years Exp.</div></div>
             <div className="gr-stat"><div className="sv">4<span>+</span></div><div className="sl">Internships</div></div>
             <div className="gr-stat"><div className="sv">7<span>+</span></div><div className="sl">Projects</div></div>
             <div className="gr-stat"><div className="sv">6<span>+</span></div><div className="sl">Tech Stacks</div></div>
-          </div>
+          </div> */}
         </div>
 
         <div className="gr-pg-num">Page 1 of 2</div>
@@ -1734,9 +1782,9 @@ const Resume3 = () => {
                   ['AI / Automation',  'Agentic AI, NLP (Natural Language to SQL), Pabbly Connect'],
                   ['DevOps & Tools',   'Git, GitHub, VS Code, Postman, Ubuntu Server'],
                   ['Deployment',       'Netlify, Vercel, Ubuntu Server, Remote Desktop (UAT/PROD)'],
-                  ['Other',            'Core Java, OOPS, Firebase, GCP, Zoho Mail API'],
-                  ['IDEs',             'Visual Studio Code, Postman'],
-                  ['Operating Systems','Windows, Ubuntu Linux'],
+                  // ['Other',            'Core Java, OOPS, Firebase, GCP, Zoho Mail API'],
+                  // ['IDEs',             'Visual Studio Code, Postman'],
+                  // ['Operating Systems','Windows, Ubuntu Linux'],
                 ].map(([l,v]) => (
                   <tr key={l}><td>{l}</td><td>{v}</td></tr>
                 ))}
@@ -1748,7 +1796,7 @@ const Resume3 = () => {
           <div className="gr-sec">
             <div className="gr-sec-hd"><span className="gr-sec-title">Additional Skills &amp; Certifications</span><div className="gr-sec-rule"/></div>
             <div className="gr-tags">
-              {['MERN Stack Certification','CI/CD Deployment Automation','Agile / Scrum Methodology',
+              {['CI/CD Deployment Automation','Agile / Scrum Methodology',
                 'RESTful API Design','Responsive Web Design','Third-party API Integration',
                 'Quality Assurance & Testing','Version Control (Git/GitHub)',
                 'Agentic AI Development','SQL Optimization','UAT & PROD Management'].map(c=>(
