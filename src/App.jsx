@@ -140,162 +140,395 @@ const globalStyles = `
 `;
 
 /* ─────────────────────────────────────────────────────────────
-   RESUME 3 — ATS-100 Design System
-   Visual concept: Editorial broadsheet — strong ink-black type,
-   thin cobalt rule accents, generous white space, zero decoration
-   that can't be parsed. Fonts: Georgia display + Arial body.
-   Signature element: thin double-rule section headers that feel
-   like a quality newspaper byline, no decorative graphics.
+   RESUME 3 — ATS-100 · Refined Professional Design
+   Concept: Clean executive resume — deep navy accent system,
+   Inter/Georgia type pairing, structured white space,
+   subtle background fills on the header band and section
+   labels. Zero floats, zero tables, zero multi-column layouts.
+   Everything reads in a single top-to-bottom linear order so
+   any ATS text-extraction engine gets perfect parse order.
+   Export-safe: no CSS that html2canvas can't render
+   (no backdrop-filter, no SVG bg, no clip-path).
 ───────────────────────────────────────────────────────────── */
 const atsCSS = `
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+  /* ── COLOUR TOKENS ── */
+  .ats-wrap {
+    --ac:      #0f3460;   /* deep navy accent */
+    --ac2:     #16537e;   /* mid accent */
+    --ac-lt:   #e8f0f9;   /* accent tint */
+    --ac-bd:   #b8cce4;   /* accent border */
+    --ink:     #0d0d0d;   /* near-black text */
+    --body:    #2b2b2b;   /* body text */
+    --muted:   #555555;   /* secondary text */
+    --rule:    #d0d7e2;   /* divider lines */
+    --bg-pg:   #f0f2f5;   /* outer background */
+    --gold:    #b8860b;   /* award amber */
+    --gold-bg: #fdf8ed;
+    --green:   #145c38;
+    --green-bg:#edf7f2;
+    --green-bd:#9fd3b8;
+  }
 
   .ats-wrap {
     max-width: 860px;
     margin: 0 auto;
-    padding: 32px 20px 60px;
-    background: #ECEAE5;
+    padding: 28px 20px 60px;
+    background: var(--bg-pg);
   }
 
-  /* PAGE CARD */
+  /* ── PAGE CARD ── */
   .ats-page {
     background: #ffffff;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,.06), 0 12px 32px rgba(0,0,0,.10), 0 40px 80px rgba(0,0,0,.07);
-    padding: 52px 56px 44px;
-    font-family: Arial, Helvetica, sans-serif;
+    box-shadow:
+      0 1px 3px rgba(15,52,96,.08),
+      0 8px 24px rgba(15,52,96,.10),
+      0 32px 64px rgba(15,52,96,.08);
+    font-family: 'Source Sans 3', Arial, Helvetica, sans-serif;
     font-size: 10.5pt;
-    color: #111111;
+    color: var(--body);
     line-height: 1.5;
+    overflow: hidden;
   }
 
-  /* ── NAME BLOCK ── */
-  .ats-name-block { margin-bottom: 14px; }
+  /* ── TOP HEADER BAND ── */
+  .ats-header-band {
+    background: var(--ac);
+    padding: 32px 48px 26px;
+  }
 
   .ats-name {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 34pt;
-    font-weight: 800;
-    color: #0a0a0a;
-    letter-spacing: -0.5px;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 30pt;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -0.3px;
     line-height: 1;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
   }
 
   .ats-headline {
-    font-size: 10pt;
+    font-size: 9pt;
     font-weight: 600;
-    color: #1a3a6b;
-    letter-spacing: 1.8px;
+    color: rgba(255,255,255,0.78);
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 
-  /* thin cobalt rule under name */
-  .ats-name-rule {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    margin-bottom: 12px;
+  /* hairline rule inside header */
+  .ats-hd-rule {
+    height: 1px;
+    background: rgba(255,255,255,0.22);
+    margin-bottom: 14px;
   }
-  .ats-name-rule .rule-thick { height: 3px; width: 48px; background: #1a3a6b; }
-  .ats-name-rule .rule-thin  { flex: 1; height: 1px; background: #c8d4e8; margin-left: 6px; }
 
-  /* CONTACT ROW */
+  /* CONTACT CHIPS inside header */
   .ats-contacts {
-    font-size: 9.5pt;
-    color: #333333;
-    line-height: 1.8;
+    font-size: 9pt;
+    color: rgba(255,255,255,0.80);
+    line-height: 2;
   }
-  .ats-contacts a { color: #1a3a6b; text-decoration: none; font-weight: 500; }
+  .ats-contacts a {
+    color: #a8c8f0;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .ats-contacts .sep {
+    color: rgba(255,255,255,0.35);
+    margin: 0 8px;
+  }
+
+  /* ── BODY PADDING ── */
+  .ats-body { padding: 24px 48px 36px; }
 
   /* ── SECTION ── */
-  .ats-sec { margin-top: 18px; }
+  .ats-sec { margin-top: 5px; }
 
   .ats-sec-hd {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
+    background: var(--ac-lt);
+    padding: 5px 10px 5px 0;
+    margin-left: -4px;
+    padding-left: 4px;
+  }
+
+  .ats-sec-rule-left {
+    width: 4px;
+    height: 16px;
+    background: var(--ac);
+    flex-shrink: 0;
+    border-radius: 0 2px 2px 0;
   }
 
   .ats-sec-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 12pt;
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    font-size: 8.5pt;
     font-weight: 700;
-    color: #0a0a0a;
-    letter-spacing: .2px;
-    white-space: nowrap;
+    color: var(--ac);
+    letter-spacing: 2.5px;
     text-transform: uppercase;
-    font-size: 9.5pt;
-    letter-spacing: 2px;
+    white-space: nowrap;
   }
 
-  .ats-sec-rule-left  { width: 3px; height: 14px; background: #1a3a6b; flex-shrink: 0; }
-  .ats-sec-rule-right { flex: 1; height: 1px; background: #d8dfe8; }
+  .ats-sec-rule-right {
+    flex: 1;
+    height: 1px;
+    background: var(--ac-bd);
+  }
 
   /* ── SUMMARY ── */
   .ats-summary {
     font-size: 10.5pt;
-    color: #222222;
-    line-height: 1.65;
-    padding-left: 13px;
-    border-left: 2px solid #dde4ef;
+    color: var(--body);
+    line-height: 1.68;
+    padding: 10px 14px;
+    background: #fafbfd;
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--ac2);
   }
 
-  /* ── SKILLS GRID ── */
-  .ats-skills-block { font-size: 10pt; color: #222222; line-height: 1.7; }
-  .ats-skills-block .skill-row { display: flex; gap: 0; margin-bottom: 3px; }
-  .ats-skills-block .skill-label { font-weight: 700; color: #0a0a0a; min-width: 136px; flex-shrink: 0; font-size: 9.5pt; }
-  .ats-skills-block .skill-val   { color: #333333; font-size: 9.5pt; }
+  /* ── SKILLS ── */
+  .ats-skills-block {
+    font-size: 10pt;
+    color: var(--body);
+    line-height: 1.65;
+  }
+  .ats-skills-block .skill-row {
+    display: flex;
+    gap: 0;
+    padding: 3px 0;
+    border-bottom: 1px solid #f0f2f5;
+  }
+  .ats-skills-block .skill-row:last-child { border-bottom: none; }
+  .ats-skills-block .skill-label {
+    font-weight: 700;
+    color: var(--ink);
+    min-width: 140px;
+    flex-shrink: 0;
+    font-size: 9.5pt;
+    padding-right: 12px;
+  }
+  .ats-skills-block .skill-val {
+    color: var(--muted);
+    font-size: 9.5pt;
+  }
 
   /* ── EXPERIENCE ── */
-  .ats-exp { margin-bottom: 16px; padding-left: 14px; border-left: 2px solid #e8ecf2; }
-  .ats-exp.current-job { border-left-color: #1a3a6b; }
+  .ats-exp {
+    margin-bottom: 10px;
+    padding-left: 13px;
+    border-left: 3px solid var(--rule);
+  }
+  .ats-exp.current-job {
+    border-left-color: var(--ac);
+  }
 
-  .ats-exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 3px; }
-  .ats-exp-co   { font-size: 11.5pt; font-weight: 700; color: #0a0a0a; }
-  .ats-exp-role { font-size: 10pt; font-weight: 600; color: #1a3a6b; margin-top: 1px; }
-  .ats-exp-date { font-size: 9.5pt; font-weight: 600; color: #444444; white-space: nowrap; flex-shrink: 0; text-align: right; padding-top: 2px; background: #f4f6fa; border: 1px solid #dde4ef; padding: 3px 9px; }
-  .ats-exp-date.current-badge { color: #145c38; background: #edf7f2; border-color: #9fd3b8; }
+  .ats-exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 3px;
+  }
 
-  .ats-award-line { font-size: 9pt; font-weight: 700; color: #7a5400; background: #fef9e7; border-left: 3px solid #c8a96e; padding: 3px 10px; margin: 5px 0 6px; display: inline-block; }
+  .ats-exp-co {
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: var(--ink);
+    font-family: 'Merriweather', Georgia, serif;
+    line-height: 1.2;
+  }
 
-  .ats-ul { margin: 5px 0 0 16px; padding: 0; }
-  .ats-ul li { font-size: 10pt; color: #333333; line-height: 1.6; margin-bottom: 2px; list-style-type: disc; }
-  .ats-ul li strong { color: #0a0a0a; font-weight: 700; }
+  .ats-exp-role {
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--ac2);
+    margin-top: 2px;
+  }
+
+  .ats-exp-date {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--muted);
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-align: right;
+    padding: 3px 10px;
+    background: #f4f6fa;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    letter-spacing: 0.3px;
+  }
+  .ats-exp-date.current-badge {
+    color: var(--green);
+    background: var(--green-bg);
+    border-color: var(--green-bd);
+  }
+
+  .ats-award-line {
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--gold);
+    background: var(--gold-bg);
+    border-left: 3px solid var(--gold);
+    padding: 3px 10px;
+    margin: 5px 0 7px;
+    display: inline-block;
+    letter-spacing: 0.2px;
+  }
+
+  .ats-ul { margin: 6px 0 0 18px; padding: 0; }
+  .ats-ul li {
+    font-size: 10pt;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 3px;
+    list-style-type: disc;
+  }
+  .ats-ul li strong { color: var(--ink); font-weight: 700; }
 
   /* ── EDUCATION ── */
-  .ats-edu-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid #f0f2f5; }
+  .ats-edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f2f5;
+  }
   .ats-edu-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .ats-edu-deg  { font-size: 11pt; font-weight: 700; color: #0a0a0a; }
-  .ats-edu-inst { font-size: 9.5pt; color: #444444; margin-top: 2px; }
-  .ats-edu-gpa  { font-size: 9pt; font-weight: 700; color: #1a3a6b; background: #eef2fb; border: 1px solid #c0cfe8; padding: 1px 7px; margin-top: 3px; display: inline-block; }
-  .ats-edu-right { font-size: 9.5pt; color: #444444; text-align: right; white-space: nowrap; flex-shrink: 0; }
+
+  .ats-edu-deg {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--ink);
+    font-family: 'Merriweather', Georgia, serif;
+    line-height: 1.3;
+  }
+  .ats-edu-inst {
+    font-size: 9.5pt;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+  .ats-edu-gpa {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--ac);
+    background: var(--ac-lt);
+    border: 1px solid var(--ac-bd);
+    padding: 1px 8px;
+    margin-left: 8px;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .ats-edu-right {
+    font-size: 9.5pt;
+    color: var(--muted);
+    text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
 
   /* ── PROJECTS ── */
-  .ats-proj { margin-bottom: 13px; padding-left: 14px; border-left: 2px solid #e8ecf2; }
-  .ats-proj-title { font-size: 11pt; font-weight: 700; color: #0a0a0a; margin-bottom: 2px; }
-  .ats-proj-title a { font-size: 9pt; font-weight: 500; color: #1a3a6b; text-decoration: none; margin-left: 8px; border-bottom: 1px solid #c0cfe8; padding-bottom: 1px; }
-  .ats-proj-stack { font-size: 9pt; color: #1a3a6b; font-style: italic; margin-bottom: 4px; }
+  .ats-proj {
+    margin-bottom: 14px;
+    padding-left: 13px;
+    border-left: 3px solid var(--rule);
+  }
+  .ats-proj-title {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .ats-proj-title a {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: var(--ac2);
+    text-decoration: none;
+    margin-left: 10px;
+    border-bottom: 1px solid var(--ac-bd);
+    padding-bottom: 1px;
+  }
+  .ats-proj-stack {
+    font-size: 9pt;
+    color: var(--ac2);
+    font-style: italic;
+    margin-bottom: 4px;
+  }
 
   /* ── CERTIFICATIONS ── */
-  .ats-cert-list { margin: 4px 0 0 16px; padding: 0; }
-  .ats-cert-list li { font-size: 10pt; color: #333333; line-height: 1.6; margin-bottom: 2px; list-style-type: disc; }
-  .ats-cert-list li strong { color: #0a0a0a; }
+  .ats-cert-list { margin: 5px 0 0 18px; padding: 0; }
+  .ats-cert-list li {
+    font-size: 10pt;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 2px;
+    list-style-type: disc;
+  }
+  .ats-cert-list li strong { color: var(--ink); font-weight: 700; }
 
-  /* PAGE HEADER (page 2 repeat) */
-  .ats-page2-hd { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1.5px solid #1a3a6b; }
-  .ats-page2-name { font-family: 'Playfair Display', Georgia, serif; font-size: 16pt; font-weight: 700; color: #0a0a0a; }
-  .ats-page2-sub  { font-size: 9pt; font-weight: 600; color: #1a3a6b; letter-spacing: 1.5px; text-transform: uppercase; }
+  /* ── PAGE 2 HEADER ── */
+  .ats-page2-hd {
+    background: var(--ac);
+    padding: 14px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ats-page2-name {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 14pt;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -0.2px;
+  }
+  .ats-page2-sub {
+    font-size: 8pt;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
 
-  /* PAGE NUMBER */
-  .ats-pg-num { text-align: center; font-size: 8.5pt; color: #bbbbbb; margin-top: 16px; letter-spacing: 1px; }
+  /* ── PAGE NUMBER ── */
+  .ats-pg-num {
+    text-align: center;
+    font-size: 8pt;
+    color: #bbbbbb;
+    margin-top: 18px;
+    letter-spacing: 1px;
+  }
 
-  /* DOWNLOAD */
+  /* ── DOWNLOAD BUTTON ── */
   .ats-dl-wrap { display: flex; justify-content: center; margin-top: 28px; }
-  .ats-dl-btn  { display: inline-flex; align-items: center; gap: 9px; background: #0a0a0a; color: #c8a96e; border: 1.5px solid #c8a96e; padding: 12px 36px; font-family: Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: background .2s, color .2s; }
-  .ats-dl-btn:hover { background: #1a3a6b; border-color: #1a3a6b; color: #ffffff; }
+  .ats-dl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--ac);
+    color: #ffffff;
+    border: 2px solid var(--ac);
+    padding: 13px 40px;
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s, color .2s, border-color .2s;
+    border-radius: 2px;
+  }
+  .ats-dl-btn:hover { background: #ffffff; color: var(--ac); border-color: var(--ac); }
 `;
 
 /* ── tiny SVG icon helper ── */
@@ -630,22 +863,25 @@ const Resume3 = () => {
       {/* ══ PAGE 1 ══ */}
       <div className="ats-page" ref={page1Ref}>
 
-        {/* NAME */}
-        <div className="ats-name-block">
+        {/* HEADER BAND */}
+        <div className="ats-header-band">
           <div className="ats-name">Gopal Gupta</div>
           <div className="ats-headline">MERN Stack Developer &nbsp;|&nbsp; Full Stack Software Developer &nbsp;|&nbsp; React.js · Node.js · SQL Server · Agentic AI</div>
-          <div className="ats-name-rule"><div className="rule-thick"/><div className="rule-thin"/></div>
+          <div className="ats-hd-rule"/>
           <div className="ats-contacts">
             <span>Mumbai, Maharashtra, India</span>
-            &nbsp;&nbsp;|&nbsp;&nbsp;<span>+91 9082257079</span>
-            &nbsp;&nbsp;|&nbsp;&nbsp;<span>guptagopal18082003@gmail.com</span><br/>
+            <span className="sep">|</span><span>+91 9082257079</span>
+            <span className="sep">|</span><span>guptagopal18082003@gmail.com</span><br/>
             <span>LinkedIn: <a href="https://linkedin.com/in/gopalgupta0007" target="_blank" rel="noreferrer">linkedin.com/in/gopalgupta0007</a></span>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <span className="sep">|</span>
             <span>GitHub: <a href="https://github.com/gopalgupta0007" target="_blank" rel="noreferrer">github.com/gopalgupta0007</a></span>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <span className="sep">|</span>
             <span>Portfolio: <a href="https://randomtypee.netlify.app/" target="_blank" rel="noreferrer">randomtypee.netlify.app</a></span>
           </div>
         </div>
+
+        {/* BODY */}
+        <div className="ats-body">
 
         {/* SUMMARY */}
         <div className="ats-sec">
@@ -687,14 +923,14 @@ const Resume3 = () => {
           {/* Carufus */}
           <div className="ats-exp current-job">
             <div className="ats-exp-header">
-              <div><div className="ats-exp-co">Carufus Technology — Mumbai, India</div><div className="ats-exp-role">Software Developer | Full Stack Developer (MERN + .NET)</div></div>
+              <div><div className="ats-exp-co">Carufus Technology — Mumbai, India</div><div className="ats-exp-role">Software Developer | Full Stack Developer (Angular + Node + .NET + SQL)</div></div>
               <div className="ats-exp-date current-badge">May 2024 – Present</div>
             </div>
             <div className="ats-award-line">★ Employee of the Month — May 2026</div>
             <ul className="ats-ul">
               <li>Led <strong>feature enhancement and new feature development</strong> for <strong>Wow! Momo's ERP/HRMS/Employee Management Portal</strong>, supporting <strong>500+ daily active users</strong> across HR, payroll, and operations modules</li>
               <li>Participated in daily <strong>Scrum stand-ups and sprint planning</strong>; delivered all assigned stories on time across <strong>10+ consecutive sprints</strong></li>
-              <li>Integrated <strong>React.js UI components</strong> across 6+ application modules, reducing manual data-entry workflows by an estimated <strong>30%</strong></li>
+              <li>Integrated <strong>Angular.js UI components</strong> across 6+ application modules, reducing manual data-entry workflows by an estimated <strong>30%</strong></li>
               <li>Managed and optimized <strong>.NET-based RESTful APIs</strong> for seamless frontend-to-backend system communication</li>
               <li>Authored <strong>20+ SQL scripts and stored procedures</strong> in SQL Server Management Studio (SSMS) for database operations, reporting, and query optimization</li>
               <li>Designed and deployed an <strong>automated batch-file CI/CD pipeline</strong> triggered on latest Git commits, reducing manual deployment effort by <strong>60%</strong> and eliminating missed-step errors</li>
@@ -743,6 +979,7 @@ const Resume3 = () => {
           </div>
         </div>
 
+        </div>{/* end ats-body */}
         <div className="ats-pg-num">— Page 1 of 2 —</div>
       </div>
 
@@ -753,6 +990,8 @@ const Resume3 = () => {
           <div className="ats-page2-name">Gopal Gupta</div>
           <div className="ats-page2-sub">MERN Stack Developer · Full Stack Software Developer · Page 2 of 2</div>
         </div>
+
+        <div className="ats-body">
 
         {/* EDUCATION */}
         <div className="ats-sec">
@@ -847,6 +1086,7 @@ const Resume3 = () => {
           </ul>
         </div>
 
+        </div>{/* end ats-body */}
         <div className="ats-pg-num">— Page 2 of 2 —</div>
       </div>
 
