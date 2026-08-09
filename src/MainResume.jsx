@@ -471,11 +471,11 @@ export default function MainResume() {
             <span className="sep">|</span>
             <span>guptagopal18082003@gmail.com</span>
             <br />
-            <span>LinkedIn:&nbsp;<a href="https://linkedin.com/in/gopalgupta0007" target="_blank" rel="noreferrer">linkedin.com/in/gopalgupta0007</a></span>
+            <span>LinkedIn:&nbsp;<a href="https://linkedin.com/in/gopalgupta0007" target="_blank" rel="noreferrer">linkedin.com/in/gopalguptag</a></span>
             <span className="sep">|</span>
             <span>GitHub:&nbsp;<a href="https://github.com/gopalgupta0007" target="_blank" rel="noreferrer">github.com/gopalgupta0007</a></span>
             <span className="sep">|</span>
-            <span>Portfolio:&nbsp;<a href="https://randomtypee.netlify.app/" target="_blank" rel="noreferrer">randomtypee.netlify.app</a></span>
+            <span>Portfolio:&nbsp;<a href="https://gopalgupta0007.netlify.app/" target="_blank" rel="noreferrer">gopalgupta0007.netlify.app/</a></span>
           </div>
         </div>
 
@@ -532,7 +532,7 @@ export default function MainResume() {
                   <div className="mr-exp-co">Carufus Technology — Mumbai, India</div>
                   <div className="mr-exp-role">Software Developer · Angular / MEAN Stack / .NET</div>
                 </div>
-                <div className="mr-exp-date now">May 2024 – Present</div>
+                <div className="mr-exp-date now">May 2025 – Present</div>
               </div>
               <div className="mr-award">★ Employee of the Month — May 2026</div>
               <ul className="mr-ul">
