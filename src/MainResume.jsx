@@ -552,7 +552,7 @@ export default function MainResume() {
                   <div className="mr-exp-co">Digital Rhombus — Mumbai, India</div>
                   <div className="mr-exp-role">MEAN Stack Developer Intern</div>
                 </div>
-                <div className="mr-exp-date">Feb 2024 – Apr 2024</div>
+                <div className="mr-exp-date">Feb 2025 – Apr 2025</div>
               </div>
               <ul className="mr-ul">
                 <li>Built a <strong>financial reporting SPA</strong> using Angular with Chart.js and D3.js visualizations and customizable PDF report generation</li>
@@ -568,7 +568,7 @@ export default function MainResume() {
                   <div className="mr-exp-co">Tescom — Mumbai, India</div>
                   <div className="mr-exp-role">Full Stack MEAN Developer Intern</div>
                 </div>
-                <div className="mr-exp-date">Jul 2023 – Sep 2023</div>
+                <div className="mr-exp-date">Jul 2024 – Sep 2024</div>
               </div>
               <ul className="mr-ul">
                 <li>Developed and deployed <strong>Bharat CXO</strong> and <strong>TESCOM corporate website</strong> on Ubuntu Server, serving live production traffic from day one</li>
@@ -583,7 +583,7 @@ export default function MainResume() {
                   <div className="mr-exp-co">DevTown — Remote</div>
                   <div className="mr-exp-role">MERN Stack Training Program &amp; Internship</div>
                 </div>
-                <div className="mr-exp-date">Jan 2022 – Apr 2022</div>
+                <div className="mr-exp-date">Jan 2023 – Apr 2023</div>
               </div>
               <ul className="mr-ul">
                 <li>Completed 3-month intensive MEAN/MERN Stack training; collaborated in a 4-member Agile team to build a <strong>movie booking application</strong> with Angular routing, user authentication, seat selection, and booking confirmation</li>
