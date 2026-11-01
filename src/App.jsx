@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import MainResume from './MainResume';
+import JavaResume from './JavaResume';
 
 /* ─────────────────────────────────────────────────────────────
    RESUME 2 — Premium Navy/Gold  (injected once into <head>)
@@ -1123,11 +1124,13 @@ const App = () => {
         <button className={`tab-btn ${activeTab === 2 ? 'active' : ''}`} onClick={() => setActiveTab(2)}>Resume — Premium</button>
         <button className={`tab-btn ${activeTab === 3 ? 'active' : ''}`} onClick={() => setActiveTab(3)}>Resume — ATS 100</button>
         <button className={`tab-btn ${activeTab === 4 ? 'active' : ''}`} onClick={() => setActiveTab(4)}>Main Resume — ATS 95+</button>
+        <button className={`tab-btn ${activeTab === 5 ? 'active' : ''}`} onClick={() => setActiveTab(5)}>Java Resume</button>
       </div>
       {activeTab === 1 && <Resume1 />}
       {activeTab === 2 && <Resume2 />}
       {activeTab === 3 && <Resume3 />}
       {activeTab === 4 && <MainResume />}
+      {activeTab === 5 && <JavaResume />}
     </div>
   );
 };

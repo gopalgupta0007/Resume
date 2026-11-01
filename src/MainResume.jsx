@@ -3,12 +3,17 @@
 // import jsPDF from 'jspdf';
 
 // /*
+<<<<<<< HEAD
 //   MainResume — Full Stack Developer (Angular · MEAN · MERN)
+=======
+//   MainResume — Angular / MEAN Stack Developer
+>>>>>>> uat
 //   ATS Strategy:
 //   • 100% single-column, no sidebar, no CSS grid for content
 //   • Standard Arial body font — best ATS font
 //   • Skills listed as plain text rows, not chips/tags
 //   • All sections in ATS-expected order
+<<<<<<< HEAD
 //   • No decorative unicode glyphs (★ / ↗) inside extractable text — they
 //     tokenize as garbage in most parsers and drag the score down
 //   • Angular, MEAN, MERN, TypeScript, RxJS, NgRx keywords dense
@@ -17,6 +22,11 @@
 //   • Two export paths: real text (Print → Save as PDF) vs. rasterized
 //     image (html2canvas). The text path is the one that's actually
 //     machine-readable — see the in-app tip under the controls.
+=======
+//   • Angular, MEAN, TypeScript, RxJS, NgRx keywords dense
+//   • Quantified bullets on every role
+//   • LinkedIn + GitHub in contact line
+>>>>>>> uat
 //   PDF Fix: captures each page at 794px (A4 screen px), maps to full A4
 // */
 
@@ -29,7 +39,11 @@
 //     max-width: 870px;
 //     margin: 0 auto;
 //     padding: 24px 18px 48px;
+<<<<<<< HEAD
 //     background: #eef0f2;
+=======
+//     background: #E8EAED;
+>>>>>>> uat
 //     font-family: Arial, Helvetica, sans-serif;
 //   }
 
@@ -38,8 +52,12 @@
 //     display: flex;
 //     justify-content: center;
 //     gap: 10px;
+<<<<<<< HEAD
 //     margin-bottom: 10px;
 //     flex-wrap: wrap;
+=======
+//     margin-bottom: 20px;
+>>>>>>> uat
 //   }
 //   .mr-btn {
 //     display: inline-flex;
@@ -51,11 +69,16 @@
 //     font-weight: 700;
 //     letter-spacing: 1.2px;
 //     text-transform: uppercase;
+<<<<<<< HEAD
 //     border: 2px solid #12283f;
+=======
+//     border: 2px solid #0b4f6c;
+>>>>>>> uat
 //     cursor: pointer;
 //     transition: all .15s;
 //     border-radius: 2px;
 //   }
+<<<<<<< HEAD
 //   .mr-btn-primary { background: #12283f; color: #fff; }
 //   .mr-btn-primary:hover { background: #0b1c2e; }
 //   .mr-btn-primary:disabled { opacity: .6; cursor: default; }
@@ -71,15 +94,28 @@
 //     line-height: 1.5;
 //   }
 //   .mr-tip strong { color: #12283f; }
+=======
+//   .mr-btn-primary { background: #0b4f6c; color: #fff; }
+//   .mr-btn-primary:hover { background: #083d56; }
+//   .mr-btn-primary:disabled { opacity: .6; cursor: default; }
+//   .mr-btn-secondary { background: #fff; color: #0b4f6c; }
+//   .mr-btn-secondary:hover { background: #eaf3f8; }
+>>>>>>> uat
 
 //   /* ── PAGE CARD ── */
 //   .mr-page {
 //     background: #ffffff;
 //     margin-bottom: 16px;
 //     box-shadow:
+<<<<<<< HEAD
 //       0 1px 3px rgba(18,40,63,.08),
 //       0 6px 20px rgba(18,40,63,.10),
 //       0 28px 56px rgba(18,40,63,.07);
+=======
+//       0 1px 3px rgba(11,79,108,.08),
+//       0 6px 20px rgba(11,79,108,.10),
+//       0 28px 56px rgba(11,79,108,.07);
+>>>>>>> uat
 //     overflow: hidden;
 //     font-size: 10pt;
 //     color: #222222;
@@ -91,7 +127,11 @@
 
 //   /* ── HEADER BAND ── */
 //   .mr-header {
+<<<<<<< HEAD
 //     background: #12283f;
+=======
+//     background: #0b4f6c;
+>>>>>>> uat
 //     padding: 15px 35px 15px;
 //   }
 //   .mr-name {
@@ -107,7 +147,11 @@
 //     font-family: 'Inter', Arial, sans-serif;
 //     font-size: 8.5pt;
 //     font-weight: 600;
+<<<<<<< HEAD
 //     color: #e8c073;
+=======
+//     color: rgba(255,255,255,0.68);
+>>>>>>> uat
 //     letter-spacing: 2px;
 //     text-transform: uppercase;
 //     margin-bottom: 14px;
@@ -119,10 +163,17 @@
 //   }
 //   .mr-contacts {
 //     font-size: 8.5pt;
+<<<<<<< HEAD
 //     color: rgba(255,255,255,0.80);
 //     line-height: 1.8;
 //   }
 //   .mr-contacts a { color: #e8c073; text-decoration: none; font-weight: 500; }
+=======
+//     color: rgba(255,255,255,0.78);
+//     line-height: 1.8;
+//   }
+//   .mr-contacts a { color: #7ecef4; text-decoration: none; font-weight: 500; }
+>>>>>>> uat
 //   .mr-contacts .sep { color: rgba(255,255,255,0.28); margin: 0 7px; }
 
 //   /* ── BODY ── */
@@ -138,26 +189,40 @@
 //     gap: 10px;
 //     margin-bottom: 5px;
 //     padding: 4px 0 4px 10px;
+<<<<<<< HEAD
 //     background: #eef1f4;
 //     border-left: 3px solid #12283f;
+=======
+//     background: #eef4f8;
+//     border-left: 3px solid #0b4f6c;
+>>>>>>> uat
 //     margin-left: -10px;
 //   }
 //   .mr-sec-title {
 //     font-family: 'Inter', Arial, sans-serif;
 //     font-size: 7.5pt;
 //     font-weight: 700;
+<<<<<<< HEAD
 //     color: #12283f;
+=======
+//     color: #0b4f6c;
+>>>>>>> uat
 //     letter-spacing: 2px;
 //     text-transform: uppercase;
 //   }
 //   .mr-sec-rule {
 //     flex: 1;
 //     height: 1px;
+<<<<<<< HEAD
 //     background: #ccd3da;
+=======
+//     background: #b8d4e4;
+>>>>>>> uat
 //   }
 
 //   /* ── SUMMARY ── */
 //   .mr-summary {
+<<<<<<< HEAD
 //     font-size: 8pt;
 //     color: #2b2b2b;
 //     line-height: 1.5;
@@ -165,6 +230,15 @@
 //     background: #f7f8f9;
 //     border: 1px solid #dde2e7;
 //     border-left: 3px solid #a9802f;
+=======
+//     font-size: 10pt;
+//     color: #2b2b2b;
+//     line-height: 1.65;
+//     padding: 10px 13px;
+//     background: #f8fbfd;
+//     border: 1px solid #d0dfe8;
+//     border-left: 3px solid #0b4f6c;
+>>>>>>> uat
 //   }
 
 //   /* ── SKILLS ── */
@@ -190,9 +264,15 @@
 //   .mr-exp {
 //     margin-bottom: 8px;
 //     padding-left: 13px;
+<<<<<<< HEAD
 //     border-left: 3px solid #d7dde3;
 //   }
 //   .mr-exp.current { border-left-color: #a9802f; }
+=======
+//     border-left: 3px solid #d0e4ef;
+//   }
+//   .mr-exp.current { border-left-color: #0b4f6c; }
+>>>>>>> uat
 
 //   .mr-exp-header {
 //     display: flex;
@@ -212,7 +292,11 @@
 //   .mr-exp-role {
 //     font-size: 9.5pt;
 //     font-weight: 600;
+<<<<<<< HEAD
 //     color: #12283f;
+=======
+//     color: #0b4f6c;
+>>>>>>> uat
 //     margin-top: 2px;
 //   }
 //   .mr-exp-date {
@@ -228,17 +312,29 @@
 //     color: #444444;
 //   }
 //   .mr-exp-date.now {
+<<<<<<< HEAD
 //     background: #f6ecd9;
 //     border-color: #d9b876;
 //     color: #7a5a10;
+=======
+//     background: #edf7f2;
+//     border-color: #9fd3b8;
+//     color: #145c38;
+>>>>>>> uat
 //   }
 //   .mr-award {
 //     display: inline-block;
 //     font-size: 8.5pt;
 //     font-weight: 700;
+<<<<<<< HEAD
 //     color: #7a5a10;
 //     background: #f6ecd9;
 //     border-left: 3px solid #a9802f;
+=======
+//     color: #7a5400;
+//     background: #fef8e7;
+//     border-left: 3px solid #c8a030;
+>>>>>>> uat
 //     padding: 2px 9px;
 //     margin: 4px 0 6px;
 //   }
@@ -275,9 +371,15 @@
 //   .mr-edu-gpa {
 //     font-size: 8pt;
 //     font-weight: 700;
+<<<<<<< HEAD
 //     color: #12283f;
 //     background: #eef1f4;
 //     border: 1px solid #ccd3da;
+=======
+//     color: #0b4f6c;
+//     background: #eef4f8;
+//     border: 1px solid #b8d4e4;
+>>>>>>> uat
 //     padding: 1px 7px;
 //     margin-left: 7px;
 //     border-radius: 2px;
@@ -295,9 +397,15 @@
 
 //   /* ── PROJECTS ── */
 //   .mr-proj {
+<<<<<<< HEAD
 //     margin-bottom: 10px;
 //     padding-left: 13px;
 //     border-left: 3px solid #d7dde3;
+=======
+//     margin-bottom: 11px;
+//     padding-left: 13px;
+//     border-left: 3px solid #d0e4ef;
+>>>>>>> uat
 //   }
 //   .mr-proj-title {
 //     font-family: 'Inter', Arial, sans-serif;
@@ -309,20 +417,35 @@
 //   .mr-proj-title a {
 //     font-size: 8pt;
 //     font-weight: 600;
+<<<<<<< HEAD
 //     color: #a9802f;
 //     text-decoration: none;
 //     margin-left: 8px;
 //     border-bottom: 1px solid #e3cd9a;
+=======
+//     color: #0b4f6c;
+//     text-decoration: none;
+//     margin-left: 8px;
+//     border-bottom: 1px solid #b8d4e4;
+>>>>>>> uat
 //     padding-bottom: 1px;
 //   }
 //   .mr-proj-stack {
 //     font-size: 8.5pt;
+<<<<<<< HEAD
 //     color: #12283f;
+=======
+//     color: #0b4f6c;
+>>>>>>> uat
 //     font-style: italic;
 //     margin-bottom: 3px;
 //   }
 
+<<<<<<< HEAD
 //   /* ── CERTIFICATIONS / ACHIEVEMENTS ── */
+=======
+//   /* ── CERTIFICATIONS ── */
+>>>>>>> uat
 //   .mr-cert-list { margin: 4px 0 0 16px; padding: 0; }
 //   .mr-cert-list li {
 //     font-size: 9.5pt;
@@ -335,7 +458,11 @@
 
 //   /* ── PAGE 2 HEADER ── */
 //   .mr-page2-hd {
+<<<<<<< HEAD
 //     background: #12283f;
+=======
+//     background: #0b4f6c;
+>>>>>>> uat
 //     padding: 12px 48px;
 //     display: flex;
 //     justify-content: space-between;
@@ -350,7 +477,11 @@
 //   .mr-page2-sub {
 //     font-size: 7.5pt;
 //     font-weight: 600;
+<<<<<<< HEAD
 //     color: rgba(255,255,255,0.62);
+=======
+//     color: rgba(255,255,255,0.60);
+>>>>>>> uat
 //     letter-spacing: 1.2px;
 //     text-transform: uppercase;
 //   }
@@ -367,7 +498,10 @@
 
 //   @media print {
 //     .mr-controls { display: none !important; }
+<<<<<<< HEAD
 //     .mr-tip { display: none !important; }
+=======
+>>>>>>> uat
 //     .mr-root { background: transparent; padding: 0; }
 //     .mr-page { box-shadow: none; break-after: page; }
 //   }
@@ -382,11 +516,15 @@
 //   }
 // }
 
+<<<<<<< HEAD
 // /* ── Rasterized PDF export — captures at exact 794px width to match A4.
 //    NOTE: this produces an image, not selectable text. Fine for sharing
 //    a pixel-perfect copy, but most ATS parsers can't read text out of it.
 //    For job applications, use the "Save as PDF" (browser print) button
 //    instead — it keeps real, selectable, parseable text. ── */
+=======
+// /* ── PDF export — captures at exact 794px width to match A4 ── */
+>>>>>>> uat
 // async function exportPDF(refs, filename) {
 //   const pdf = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
 //   const A4_W = pdf.internal.pageSize.getWidth();   // 210mm
@@ -440,7 +578,11 @@
 //   const handleExport = async () => {
 //     setExporting(true);
 //     try {
+<<<<<<< HEAD
 //       await exportPDF([page1, page2], 'gopal_gupta_fullstack_developer.pdf');
+=======
+//       await exportPDF([page1, page2], 'gopal_gupta_angular_mean.pdf');
+>>>>>>> uat
 //     } catch (e) {
 //       console.error(e);
 //       alert('Error generating PDF. Please try again.');
@@ -461,6 +603,7 @@
 
 //       {/* CONTROLS */}
 //       <div className="mr-controls">
+<<<<<<< HEAD
 //         <button className="mr-btn mr-btn-primary" onClick={() => window.print()}>
 //           <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
 //             <path strokeLinecap="round" strokeLinejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
@@ -479,6 +622,20 @@
 //         print dialog and keeps the text real and selectable, which is what applicant tracking
 //         systems actually read. "Download Image PDF" renders a picture of the page instead, which
 //         looks identical but most ATS software can't extract any text from it.
+=======
+//         <button className="mr-btn mr-btn-primary" onClick={handleExport} disabled={exporting}>
+//           <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+//             <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+//           </svg>
+//           {exporting ? 'Generating PDF…' : 'Download Resume PDF'}
+//         </button>
+//         <button className="mr-btn mr-btn-secondary" onClick={() => window.print()}>
+//           <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+//             <path strokeLinecap="round" strokeLinejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+//           </svg>
+//           Print
+//         </button>
+>>>>>>> uat
 //       </div>
 
 //       {/* ══════════════ PAGE 1 ══════════════ */}
@@ -488,21 +645,37 @@
 //         <div className="mr-header">
 //           <div className="mr-name">Gopal Gupta</div>
 //           <div className="mr-tagline">
+<<<<<<< HEAD
 //             Full Stack Developer &nbsp;·&nbsp; React · Angular · MERN Stack
 //           </div>
 //           <div className="mr-hd-divider" />
 //           <div className="mr-contacts">
 //             <span>Sion Koliwada Mumbai, Maharashtra, India</span>
+=======
+//             MEAN Stack Developer &nbsp;·&nbsp; Full Stack Software Developer
+//           </div>
+//           <div className="mr-hd-divider" />
+//           <div className="mr-contacts">
+//             <span>Mumbai, Maharashtra, India</span>
+>>>>>>> uat
 //             <span className="sep">|</span>
 //             <span>+91 9082257079</span>
 //             <span className="sep">|</span>
 //             <span>guptagopal18082003@gmail.com</span>
 //             <br />
+<<<<<<< HEAD
 //             <span>LinkedIn:&nbsp;<a href="https://linkedin.com/in/gopalgupta0007" target="_blank" rel="noreferrer">linkedin.com/in/gopalguptag</a></span>
 //             <span className="sep">|</span>
 //             <span>GitHub:&nbsp;<a href="https://github.com/gopalgupta0007" target="_blank" rel="noreferrer">github.com/gopalgupta0007</a></span>
 //             <span className="sep">|</span>
 //             <span>Best Project:&nbsp;<a href="https://randomtypee.netlify.app/" target="_blank" rel="noreferrer">randomtypee.netlify.app</a></span>
+=======
+//             <span>LinkedIn:&nbsp;<a href="https://linkedin.com/in/gopalgupta0007" target="_blank" rel="noreferrer">linkedin.com/in/gopalgupta0007</a></span>
+//             <span className="sep">|</span>
+//             <span>GitHub:&nbsp;<a href="https://github.com/gopalgupta0007" target="_blank" rel="noreferrer">github.com/gopalgupta0007</a></span>
+//             <span className="sep">|</span>
+//             <span>Portfolio:&nbsp;<a href="https://randomtypee.netlify.app/" target="_blank" rel="noreferrer">randomtypee.netlify.app</a></span>
+>>>>>>> uat
 //           </div>
 //         </div>
 
@@ -511,6 +684,7 @@
 //           {/* PROFESSIONAL SUMMARY */}
 //           <div className="mr-sec">
 //             <SecHd title="Professional Summary" />
+<<<<<<< HEAD
 //             <p className="mr-summary">
 //               Full Stack Developer with <strong>2+ years of experience</strong> across the <strong>Angular/MEAN and MERN
 //               stacks</strong>, building enterprise-grade ERP and HRMS applications used by <strong>500+ daily users</strong>.
@@ -521,6 +695,18 @@
 //               automation. Agile/Scrum practitioner recognized as <strong>Employee of the Month</strong> for delivery on a
 //               flagship enterprise portal. M.Sc. IT graduate, Mumbai University (CGPA 9.0/10.0).
 //             </p>
+=======
+//             {/* <p className="mr-summary">
+//               Results-driven <strong>Angular Developer and MEAN Stack Developer</strong> with 2+ years of professional
+//               experience building enterprise-grade web applications, ERP portals, and HRMS systems. Proficient in
+//               <strong> Angular (v12+), TypeScript, RxJS, NgRx, HTML5, CSS3, Node.js, Express.js, MongoDB, and SQL Server</strong>.
+//               Hands-on expertise in <strong>RESTful API integration, Angular routing, lazy loading, reactive forms, and CI/CD automation</strong>.
+//               Experienced in <strong>Agile/Scrum</strong> with a proven track record of delivering across 10+ sprints.
+//               Recognized as <strong>Employee of the Month (May 2026)</strong> at Carufus Technology for contributions to an
+//               enterprise Employee Management Portal serving 500+ daily users. M.Sc. IT graduate from Mumbai University (CGPA 9.0).
+//             </p> */}
+//             <p>Results-driven <strong>MERN Stack Developer with 2+ years of experience</strong> building scalable web applications, ERP portals, and HRMS systems. Strong in <strong>React.js, JavaScript, TypeScript, Node.js, Express.js, MongoDB, HTML5, CSS3, Redux, and RESTful APIs</strong>, with working knowledge of <strong>Angular</strong>. Experienced in developing <strong>responsive UIs, API integration, authentication, and Agile/Scrum delivery</strong>. Recognized as Employee of the Month for contributing to an enterprise portal serving <strong>500+ daily users</strong>. M.Sc. IT graduate from Mumbai University.</p>
+>>>>>>> uat
 //           </div>
 
 //           {/* TECHNICAL SKILLS */}
@@ -528,6 +714,7 @@
 //             <SecHd title="Technical Skills" />
 //             <div className="mr-skills-block">
 //               {[
+<<<<<<< HEAD
 //                 ['Angular',          'Angular 12/14/16+, Angular CLI, Angular Material, Router, Lazy Loading, Guards, Interceptors, Directives, Pipes, RxJS, NgRx'],
 //                 ['React',            'React.js 18+, React Router, Hooks, Context API, Redux, Custom Hooks'],
 //                 ['Frontend Core',    'TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS, Bootstrap 5, Responsive Design'],
@@ -536,6 +723,19 @@
 //                 ['Deployment',       'Netlify, Vercel, Ubuntu Server, Firebase Hosting, UAT & PROD Environment Management'],
 //                 ['AI & Automation',  'Agentic AI, Natural-Language-to-SQL, Pabbly Connect, Zoho Mail API, WhatsApp Business API'],
 //                 ['Methodologies',    'Agile, Scrum, Sprint Planning, Code Reviews, Git (branching, pull requests, merge conflict resolution)'],
+=======
+//                 // ['Angular',          'Angular 12/14/16+, Angular CLI, Angular Material, Router, Lazy Loading, Guards, Interceptors, Directives, Pipes'],
+//                 // ['Frontend',         'TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS, Bootstrap 5, Responsive Design, RxJS, NgRx'],
+//                 ['React',    'React.js, React 18+, React Router, Hooks, Context API, Redux, Lazy Loading, Custom Hooks'],
+//                 ['Frontend', 'TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS, Bootstrap 5, Responsive Design'],
+//                 ['Backend',   'Node.js, Express.js, RESTful API Design & Integration, .NET APIs, Mongoose, JWT Authentication'],
+//                 ['Database',         'MongoDB, MySQL, SQL Server (SSMS), Stored Procedures, Query Optimization, Mongoose ODM'],
+//                 // ['Testing & QA',     'Jasmine, Karma, TestBed, Unit Testing, Component/Service Testing, Test Case Creation, Regression Testing'],
+//                 // ['DevOps & Tools',   'Git, GitHub Actions, CI/CD Pipelines, Azure DevOps (basics), Postman, VS Code, npm'],
+//                 ['Deployment',       'Netlify, Vercel, Ubuntu Server, Firebase Hosting, UAT & PROD Environment Management'],
+//                 ['AI & Automation',  'Agentic AI, NL-to-SQL, Pabbly Connect, Zoho Mail API, WhatsApp Business API'],
+//                 ['Methodologies',    'Agile, Scrum, Sprint Planning, Code Reviews, React.js (additional)'],
+>>>>>>> uat
 //               ].map(([l, v]) => (
 //                 <div className="mr-skill-row" key={l}>
 //                   <span className="mr-skill-label">{l}:</span>
@@ -554,6 +754,7 @@
 //               <div className="mr-exp-header">
 //                 <div>
 //                   <div className="mr-exp-co">Carufus Technology — Mumbai, India</div>
+<<<<<<< HEAD
 //                   <div className="mr-exp-role">Full Stack Developer · Angular / MEAN Stack / .NET</div>
 //                 </div>
 //                 <div className="mr-exp-date now">May 2025 – Present</div>
@@ -563,6 +764,16 @@
 //                 <li>Learned <strong>Angular from the ground up within one week</strong> of joining with no prior professional Angular experience, and was contributing production code by the start of the following sprint</li>
 //                 <li>Developed and maintained <strong>Angular frontend modules</strong> for <strong>an ERP/HRMS portal</strong>, supporting <strong>500+ daily users</strong> across HR, payroll, and operations</li>
 //                 {/* <li>Built <strong>reusable Angular components, directives, and pipes</strong>; implemented <strong>lazy loading</strong> across 6+ feature modules, reducing initial load time by <strong>~35%</strong></li> */}
+=======
+//                   <div className="mr-exp-role">Software Developer · Angular / MEAN Stack / .NET</div>
+//                 </div>
+//                 <div className="mr-exp-date now">May 2024 – Present</div>
+//               </div>
+//               <div className="mr-award">★ Employee of the Month — May 2026</div>
+//               <ul className="mr-ul">
+//                 <li>Developed and maintained <strong>Angular frontend modules</strong> for <strong>Wow! Momo's ERP/HRMS portal</strong>, supporting <strong>500+ daily users</strong> across HR, payroll, and operations</li>
+//                 <li>Built <strong>reusable Angular components, directives, and pipes</strong>; implemented <strong>lazy loading</strong> across 6+ feature modules, reducing initial load time by <strong>~35%</strong></li>
+>>>>>>> uat
 //                 <li>Consumed <strong>.NET RESTful APIs</strong> via Angular HttpClient with JWT interceptors; integrated reactive and template-driven forms for complex HR workflows</li>
 //                 <li>Designed and deployed an <strong>automated batch-file CI/CD pipeline</strong> on Git commits, reducing deployment effort by <strong>60%</strong> and eliminating manual errors</li>
 //                 <li>Authored <strong>20+ SQL scripts and stored procedures</strong> in SSMS; managed UAT and PROD deployments with <strong>zero production rollback incidents</strong> over 6+ months</li>
@@ -577,7 +788,11 @@
 //                   <div className="mr-exp-co">Digital Rhombus — Mumbai, India</div>
 //                   <div className="mr-exp-role">MEAN Stack Developer Intern</div>
 //                 </div>
+<<<<<<< HEAD
 //                 <div className="mr-exp-date">Feb 2025 – Apr 2025</div>
+=======
+//                 <div className="mr-exp-date">Feb 2024 – Apr 2024</div>
+>>>>>>> uat
 //               </div>
 //               <ul className="mr-ul">
 //                 <li>Built a <strong>financial reporting SPA</strong> using Angular with Chart.js and D3.js visualizations and customizable PDF report generation</li>
@@ -590,6 +805,7 @@
 //             <div className="mr-exp">
 //               <div className="mr-exp-header">
 //                 <div>
+<<<<<<< HEAD
 //                   <div className="mr-exp-co">Tescom Business Solutions — Mumbai, India</div>
 //                   <div className="mr-exp-role">Full Stack MEAN Developer Intern</div>
 //                 </div>
@@ -597,6 +813,15 @@
 //               </div>
 //               <ul className="mr-ul">
 //                 <li>Developed and deployed <strong>BharatCXO</strong> and the <strong>TESCOM corporate website</strong> on Ubuntu Server, serving live production traffic from day one</li>
+=======
+//                   <div className="mr-exp-co">Tescom — Mumbai, India</div>
+//                   <div className="mr-exp-role">Full Stack MEAN Developer Intern</div>
+//                 </div>
+//                 <div className="mr-exp-date">Jul 2023 – Sep 2023</div>
+//               </div>
+//               <ul className="mr-ul">
+//                 <li>Developed and deployed <strong>Bharat CXO</strong> and <strong>TESCOM corporate website</strong> on Ubuntu Server, serving live production traffic from day one</li>
+>>>>>>> uat
 //                 <li>Automated certificate generation, WhatsApp messaging, and bulk email via <strong>Pabbly Connect</strong>, eliminating <strong>100% of manual certificate workflows</strong></li>
 //               </ul>
 //             </div>
@@ -608,10 +833,17 @@
 //                   <div className="mr-exp-co">DevTown — Remote</div>
 //                   <div className="mr-exp-role">MERN Stack Training Program &amp; Internship</div>
 //                 </div>
+<<<<<<< HEAD
 //                 <div className="mr-exp-date">Jan 2023 – Apr 2023</div>
 //               </div>
 //               <ul className="mr-ul">
 //                 <li>Completed a 3-month intensive MEAN/MERN Stack training program; collaborated in a 4-member Agile team to build a <strong>movie booking application</strong> with routing, user authentication, seat selection, and booking confirmation</li>
+=======
+//                 <div className="mr-exp-date">Jan 2022 – Apr 2022</div>
+//               </div>
+//               <ul className="mr-ul">
+//                 <li>Completed 3-month intensive MEAN/MERN Stack training; collaborated in a 4-member Agile team to build a <strong>movie booking application</strong> with Angular routing, user authentication, seat selection, and booking confirmation</li>
+>>>>>>> uat
 //               </ul>
 //             </div>
 
@@ -627,7 +859,11 @@
 //         {/* PAGE 2 HEADER */}
 //         <div className="mr-page2-hd">
 //           <div className="mr-page2-name">Gopal Gupta</div>
+<<<<<<< HEAD
 //           <div className="mr-page2-sub">Full Stack Developer · Angular · MEAN · MERN · Page 2 of 2</div>
+=======
+//           <div className="mr-page2-sub">Angular Developer · MEAN Stack Developer · Page 2 of 2</div>
+>>>>>>> uat
 //         </div>
 
 //         <div className="mr-body">
@@ -641,7 +877,11 @@
 //                 <div className="mr-edu-deg">Master of Science (M.Sc.) — Information Technology</div>
 //                 <div className="mr-edu-inst">Mumbai University <span className="mr-edu-gpa">CGPA: 9.0 / 10.0</span></div>
 //               </div>
+<<<<<<< HEAD
 //               <div className="mr-edu-right">Jun 2024 – Apr 2026</div>
+=======
+//               <div className="mr-edu-right">Jun 2022 – Apr 2026</div>
+>>>>>>> uat
 //             </div>
 
 //             <div className="mr-edu-row">
@@ -687,11 +927,19 @@
 //             <div className="mr-proj">
 //               <div className="mr-proj-title">
 //                 Your Handyman — Home Services Booking Platform
+<<<<<<< HEAD
 //                 <a href="https://your-handyman.vercel.app/" target="_blank" rel="noreferrer">your-handyman.vercel.app</a>
 //               </div>
 //               <div className="mr-proj-stack">React · Node.js · Express.js · MongoDB · Firebase Auth · Google OAuth · GCP · Vercel</div>
 //               <ul className="mr-ul">
 //                 <li>Full MEAN Stack home services platform (Urban Clap-style) with lazy loading, reactive forms, Google OAuth, Firebase OTP, and role-based route guards for 3 user types</li>
+=======
+//                 <a href="https://your-handyman.vercel.app/" target="_blank" rel="noreferrer">your-handyman.vercel.app ↗</a>
+//               </div>
+//               <div className="mr-proj-stack">React · Node.js · Express.js · MongoDB · Firebase Auth · Google OAuth · GCP · Vercel</div>
+//               <ul className="mr-ul">
+//                 <li>Full MEAN Stack home services platform (Urban Clap clone) with React lazy loading, reactive forms, Google OAuth, Firebase OTP, and role-based route guards for 3 user types</li>
+>>>>>>> uat
 //               </ul>
 //             </div>
 
@@ -699,14 +947,22 @@
 //               <div className="mr-proj-title">Financial Reporting Web Application</div>
 //               <div className="mr-proj-stack">React · Node.js · Express.js · MySQL · Chart.js · D3.js · PDF Generation</div>
 //               <ul className="mr-ul">
+<<<<<<< HEAD
 //                 <li>React SPA with interactive Chart.js/D3.js financial visualizations, customizable PDF report generation, and dynamic data binding via RxJS Observables</li>
+=======
+//                 <li>React SPA with interactive Chart.js/D3.js financial visualizations, customizable PDF report generation, and dynamic data binding via Angular services and RxJS Observables</li>
+>>>>>>> uat
 //               </ul>
 //             </div>
 
 //             <div className="mr-proj">
 //               <div className="mr-proj-title">
 //                 BharatCXO — Executive Networking Platform
+<<<<<<< HEAD
 //                 <a href="https://bharatcxomernproject.netlify.app/" target="_blank" rel="noreferrer">bharatcxomernproject.netlify.app</a>
+=======
+//                 <a href="https://bharatcxomernproject.netlify.app/" target="_blank" rel="noreferrer">bharatcxomernproject.netlify.app ↗</a>
+>>>>>>> uat
 //               </div>
 //               <div className="mr-proj-stack">MEAN Stack · Zoho Mail API · Netlify</div>
 //               <ul className="mr-ul">
@@ -717,7 +973,11 @@
 //             <div className="mr-proj">
 //               <div className="mr-proj-title">
 //                 Tescom Business Solution
+<<<<<<< HEAD
 //                 <a href="https://tescom.vercel.app/" target="_blank" rel="noreferrer">tescom.vercel.app</a>
+=======
+//                 <a href="https://tescom.vercel.app/" target="_blank" rel="noreferrer">tescom.vercel.app ↗</a>
+>>>>>>> uat
 //               </div>
 //               <div className="mr-proj-stack">MEAN Stack · Pabbly Connect · WhatsApp API · Zoho Mail · Ubuntu Server</div>
 //               <ul className="mr-ul">
@@ -725,10 +985,17 @@
 //               </ul>
 //             </div>
 
+<<<<<<< HEAD
 //             <div className="mr-proj">
 //               <div className="mr-proj-title">
 //                 RandomType — Typing Speed Application
 //                 <a href="https://randomtypee.netlify.app/" target="_blank" rel="noreferrer">randomtypee.netlify.app</a>
+=======
+//                         <div className="mr-proj">
+//               <div className="mr-proj-title">
+//                 RandomType — Typing Speed Application
+//                 <a href="https://randomtypee.netlify.app/" target="_blank" rel="noreferrer">randomtypee.netlify.app ↗</a>
+>>>>>>> uat
 //               </div>
 //               <div className="mr-proj-stack">React.js · Node.js · Express.js · MongoDB · Netlify</div>
 //               <ul className="mr-ul">
@@ -737,6 +1004,7 @@
 //             </div>
 //           </div>
 
+<<<<<<< HEAD
 //           {/* ACHIEVEMENTS & RECOGNITION */}
 //           <div className="mr-sec">
 //             <SecHd title="Achievements &amp; Recognition" />
@@ -747,10 +1015,13 @@
 //             </ul>
 //           </div>
 
+=======
+>>>>>>> uat
 //           {/* CERTIFICATIONS */}
 //           <div className="mr-sec">
 //             <SecHd title="Certifications &amp; Additional Skills" />
 //             <ul className="mr-cert-list">
+<<<<<<< HEAD
 //               <li><strong>MEAN / MERN Stack Certification</strong> — DevTown (2022)</li>
 //               <li><strong>Angular</strong> — Component architecture, routing, lazy loading, reactive forms, guards, interceptors, directives, pipes</li>
 //               <li><strong>RxJS &amp; NgRx</strong> — Reactive programming, state management, operators: map, switchMap, mergeMap, combineLatest, debounceTime</li>
@@ -1568,6 +1839,18 @@
 //               <li><strong>RESTful API &amp; Auth</strong> — HttpClient, Axios, API versioning, Postman, JWT authentication</li>
 //               <li><strong>Testing &amp; Version Control</strong> — Jasmine, Karma, TestBed, Git branching (feature/bugfix/hotfix), pull requests, code review</li>
 //               <li><strong>Cloud &amp; DevOps</strong> — Firebase Auth/Hosting, GCP basics, GitHub Actions, CI/CD automation</li>
+=======
+//               <li><strong>MERN / MEAN Stack Certification</strong> — DevTown (2022) · Angular, Node.js, Express.js, MongoDB</li>
+//               <li><strong>Angular</strong> — Component architecture, routing, lazy loading, reactive forms, guards, interceptors, directives, pipes</li>
+//               <li><strong>TypeScript</strong> — Strong typing, interfaces, generics, decorators, advanced patterns for Angular</li>
+//               <li><strong>RxJS &amp; Observables</strong> — Reactive programming, operators: map, switchMap, mergeMap, combineLatest, debounceTime</li>
+//               <li><strong>RESTful API &amp; Integration</strong> — HttpClient, Axios, API versioning, Postman, JWT authentication</li>
+//               <li><strong>CI/CD &amp; DevOps</strong> — GitHub Actions, batch-file pipelines, Azure DevOps basics, automated build and release</li>
+//               <li><strong>Angular Testing</strong> — Jasmine, Karma, TestBed, component and service testing, mocking dependencies</li>
+//               <li><strong>Version Control</strong> — Git branching (feature/bugfix/hotfix), pull requests, code reviews, conflict resolution</li>
+//               <li><strong>Firebase &amp; GCP</strong> — Firebase Auth, OTP, Hosting, Google Cloud Platform integration</li>
+//               <li><strong>Agile / Scrum</strong> — Sprint planning, backlog grooming, daily stand-ups, retrospectives, Jira basics</li>
+>>>>>>> uat
 //             </ul>
 //           </div>
 
@@ -1632,6 +1915,16 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+>>>>>>> uat
 import React, { useRef, useState } from 'react';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -1792,10 +2085,17 @@ const CSS = `
 
   /* ── SUMMARY ── */
   .mr-summary {
+<<<<<<< HEAD
     font-size: 9pt;
     color: #2b2b2b;
     line-height: 1.5;
     padding: 10px 13px;
+=======
+    font-size: 8pt;
+    color: #2b2b2b;
+    line-height: 1.5;
+    padding: 8px 10px;
+>>>>>>> uat
     background: #f7f8f9;
     border: 1px solid #dde2e7;
     border-left: 3px solid #a9802f;
@@ -2126,7 +2426,11 @@ export default function MainResume() {
           </div>
           <div className="mr-hd-divider" />
           <div className="mr-contacts">
+<<<<<<< HEAD
             <span>Sion Koliwada, Mumbai, Maharashtra, India</span>
+=======
+            <span>Sion Koliwada Mumbai, Maharashtra, India</span>
+>>>>>>> uat
             <span className="sep">|</span>
             <span>+91 9082257079</span>
             <span className="sep">|</span>
@@ -2146,6 +2450,7 @@ export default function MainResume() {
           <div className="mr-sec">
             <SecHd title="Professional Summary" />
             <p className="mr-summary">
+<<<<<<< HEAD
               Full Stack Developer with <strong>2+ years of experience</strong> across the <strong>Angular, React, and MERN/MEAN
               stacks</strong>, building secure, enterprise-grade ERP and HRMS applications used by <strong>500+ daily users</strong>.
               A fast learner — picked up <strong>Angular from scratch and shipped production code within the first week</strong>.
@@ -2153,6 +2458,16 @@ export default function MainResume() {
               Server</strong>, and <strong>RESTful API design</strong>, with hands-on experience in <strong>API security (AES-256-GCM,
               token-based auth)</strong>, .NET-to-Node.js migration, and CI/CD automation. Agile/Scrum practitioner and
               <strong> Employee of the Month</strong>. M.Sc. IT graduate, Mumbai University (CGPA 9.0/10.0).
+=======
+              Full Stack Developer with <strong>2+ years of experience</strong> across the <strong>Angular/MEAN and MERN
+              stacks</strong>, building enterprise-grade ERP and HRMS applications used by <strong>500+ daily users</strong>.
+              A fast learner by track record — picked up <strong>Angular from scratch and shipped production components
+              within the first week</strong> on the current role, with no prior professional Angular experience. Skilled in
+              <strong> Angular, React.js, TypeScript, RxJS, NgRx, Node.js, Express.js, MongoDB, SQL Server</strong>, and
+              <strong> RESTful API design</strong>, with hands-on experience in reactive forms, JWT authentication, and CI/CD
+              automation. Agile/Scrum practitioner recognized as <strong>Employee of the Month</strong> for delivery on a
+              flagship enterprise portal. M.Sc. IT graduate, Mumbai University (CGPA 9.0/10.0).
+>>>>>>> uat
             </p>
           </div>
 
@@ -2164,8 +2479,12 @@ export default function MainResume() {
                 ['Angular',          'Angular 12/14/16+, Angular CLI, Angular Material, Router, Lazy Loading, Guards, Interceptors, Directives, Pipes, RxJS, NgRx'],
                 ['React',            'React.js 18+, React Router, Hooks, Context API, Redux, Custom Hooks'],
                 ['Frontend Core',    'TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS, Bootstrap 5, Responsive Design'],
+<<<<<<< HEAD
                 ['Backend',          'Node.js, Express.js, Java, Spring Boot, RESTful API Design & Integration, .NET APIs, Mongoose'],
                 ['Security',         'AES-256-GCM Encryption, Access/Refresh Token Authentication, JWT, CORS, Multi-Device Session Management'],
+=======
+                ['Backend',          'Node.js, Express.js, RESTful API Design & Integration, .NET APIs, Mongoose, JWT Authentication'],
+>>>>>>> uat
                 ['Database',         'MongoDB, MySQL, SQL Server (SSMS), Stored Procedures, Query Optimization, Mongoose ODM'],
                 ['Deployment',       'Netlify, Vercel, Ubuntu Server, Firebase Hosting, UAT & PROD Environment Management'],
                 ['AI & Automation',  'Agentic AI, Natural-Language-to-SQL, Pabbly Connect, Zoho Mail API, WhatsApp Business API'],
@@ -2188,6 +2507,7 @@ export default function MainResume() {
               <div className="mr-exp-header">
                 <div>
                   <div className="mr-exp-co">Carufus Technology — Mumbai, India</div>
+<<<<<<< HEAD
                   <div className="mr-exp-role">Software Developer · Angular / MEAN Stack / Node.js</div>
                 </div>
                 <div className="mr-exp-date now">May 2025 – Present</div>
@@ -2201,6 +2521,21 @@ export default function MainResume() {
                 <li>Resolved <strong>50+ bugs</strong> through QA test cases; delivered across <strong>10+ consecutive Scrum sprints</strong></li>
                 <li>Learned <strong>Angular within one week</strong> of joining with no prior professional experience and shipped production code by the next sprint</li>
                 <li>Built <strong>Angular modules</strong> for an ERP/HRMS portal serving <strong>500+ daily users</strong>; added reusable components and <strong>lazy loading</strong>, cutting load time by <strong>~35%</strong></li>
+=======
+                  <div className="mr-exp-role">Full Stack Developer · Angular / MEAN Stack / .NET</div>
+                </div>
+                <div className="mr-exp-date now">May 2025 – Present</div>
+              </div>
+              <div className="mr-award">★ Recognition: Employee of the Month — May 2026</div>
+              <ul className="mr-ul">
+                <li>Learned <strong>Angular from the ground up within one week</strong> of joining with no prior professional Angular experience, and was contributing production code by the start of the following sprint</li>
+                <li>Developed and maintained <strong>Angular frontend modules</strong> for <strong>an ERP/HRMS portal</strong>, supporting <strong>500+ daily users</strong> across HR, payroll, and operations</li>
+                {/* <li>Built <strong>reusable Angular components, directives, and pipes</strong>; implemented <strong>lazy loading</strong> across 6+ feature modules, reducing initial load time by <strong>~35%</strong></li> */}
+                <li>Consumed <strong>.NET RESTful APIs</strong> via Angular HttpClient with JWT interceptors; integrated reactive and template-driven forms for complex HR workflows</li>
+                <li>Designed and deployed an <strong>automated batch-file CI/CD pipeline</strong> on Git commits, reducing deployment effort by <strong>60%</strong> and eliminating manual errors</li>
+                <li>Authored <strong>20+ SQL scripts and stored procedures</strong> in SSMS; managed UAT and PROD deployments with <strong>zero production rollback incidents</strong> over 6+ months</li>
+                <li>Resolved <strong>40+ bugs</strong> through QA test case creation and execution; consistently delivered user stories across <strong>10+ consecutive Scrum sprints</strong></li>
+>>>>>>> uat
               </ul>
             </div>
 
@@ -2235,6 +2570,23 @@ export default function MainResume() {
               </ul>
             </div>
 
+<<<<<<< HEAD
+=======
+            {/* ── DevTown ── */}
+            <div className="mr-exp">
+              <div className="mr-exp-header">
+                <div>
+                  <div className="mr-exp-co">DevTown — Remote</div>
+                  <div className="mr-exp-role">MERN Stack Training Program &amp; Internship</div>
+                </div>
+                <div className="mr-exp-date">Jan 2022 – Apr 2022</div>
+              </div>
+              <ul className="mr-ul">
+                <li>Completed a 3-month intensive MEAN/MERN Stack training program; collaborated in a 4-member Agile team to build a <strong>movie booking application</strong> with routing, user authentication, seat selection, and booking confirmation</li>
+              </ul>
+            </div>
+
+>>>>>>> uat
           </div>{/* end experience */}
 
         </div>{/* end body */}
@@ -2381,8 +2733,13 @@ export default function MainResume() {
           <div className="mr-sec">
             <SecHd title="Achievements &amp; Recognition" />
             <ul className="mr-cert-list">
+<<<<<<< HEAD
               <li><strong>Hackathons:</strong> Competed in 3+ inter-collegiate hackathons, building full-stack prototypes solo and in teams under tight time limits</li>
               <li><strong>Employee of the Month</strong> — Carufus Technology (May 2026), recognized for smart work, dedication, ownership, and consistent availability</li>
+=======
+              <li><strong>Hackathons:</strong> Competed in 3+ inter-collegiate hackathons, building full-stack prototypes solo and in teams under 4–6 hour deadlines</li>
+              <li><strong>Employee of the Month</strong> — Carufus Technology (May 2026), Recognized for smart work, dedication, ownership, and consistent availability when required.</li>
+>>>>>>> uat
               <li><strong>Zero-rollback delivery record</strong> across 6+ months of UAT/PROD deployments and 10+ consecutive Agile sprints</li>
             </ul>
           </div>
