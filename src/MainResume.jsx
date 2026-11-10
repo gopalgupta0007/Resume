@@ -2188,15 +2188,15 @@ export default function MainResume() {
               <div className="mr-exp-header">
                 <div>
                   <div className="mr-exp-co">Carufus Technology — Mumbai, India</div>
-                  <div className="mr-exp-role">Software Developer · Angular / MEAN Stack / Node.js</div>
+                  <div className="mr-exp-role">Full Stack Developer · Angular / MEAN Stack / Node.js</div>
                 </div>
                 <div className="mr-exp-date now">May 2025 – Present</div>
               </div>
               <div className="mr-award">Recognition: Employee of the Month — May 2026</div>
               <ul className="mr-ul">
                 <li>Implemented <strong>enterprise-grade API security</strong>: <strong>AES-256-GCM encryption</strong>, <strong>access/refresh-token authentication</strong>, <strong>CORS</strong> configuration, and <strong>multi-device session management</strong></li>
-                <li>Migrated <strong>.NET APIs to Node.js/Express</strong>; integrated them in Angular via HttpClient with JWT interceptors and reactive forms</li>
                 <li>Designed a scalable <strong>publisher-consumer pipeline</strong> with batch processing to handle <strong>5000+ requests per 15 minutes</strong>, optimizing database performance and resource use</li>
+                <li>Migrated <strong>.NET APIs to Node.js/Express</strong>; integrated them in Angular via HttpClient with JWT interceptors and reactive forms</li>
                 <li>Automated <strong>CI/CD</strong> with a batch-file pipeline (<strong>60% less deployment effort</strong>); wrote <strong>20+ SQL stored procedures</strong> with <strong>zero rollback incidents</strong> across UAT/PROD</li>
                 <li>Resolved <strong>50+ bugs</strong> through QA test cases; delivered across <strong>10+ consecutive Scrum sprints</strong></li>
                 <li>Learned <strong>Angular within one week</strong> of joining with no prior professional experience and shipped production code by the next sprint</li>
